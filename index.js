@@ -1,7 +1,8 @@
 var promiseObj = {};
 var defaultTimeout = 10000
 
-function load(options = {}) {
+function load(options) {
+    options = typeof options !== 'undefined' ? options : {};
     normalizeOptions(options)
     var identifier = getIdentifier(options.src)
     if (promiseObj[identifier] === undefined) {
