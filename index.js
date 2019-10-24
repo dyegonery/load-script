@@ -27,7 +27,7 @@ function load(options = {}) {
 }
 
 function normalizeOptions(options) {
-    ;['src', 'callbackName', 'resolve'].forEach(key => {
+    ;['src', 'callbackName', 'resolve'].forEach(function (key) {
         if (!~Object.keys(options).indexOf(key)) {
             var message = key + ' is required!';
             throw new Error(message);
